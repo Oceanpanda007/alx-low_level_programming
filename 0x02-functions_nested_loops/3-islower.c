@@ -1,7 +1,6 @@
 #include "main.h"
-#include <ctype.h>
 /**
- * This program checks if input is a lower case character.
+ * This function _islower checks if input is a lower case character.
  *
  * Return: 1 when True else return 0.
  */
