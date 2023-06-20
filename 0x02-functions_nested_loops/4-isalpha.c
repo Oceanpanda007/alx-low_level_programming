@@ -3,6 +3,7 @@
  *  _isalpha - checks for alphabetic characters
  *
  *  @c: The character in ASCII code
+ *
  * Return 1 when True else 0
  */
 
