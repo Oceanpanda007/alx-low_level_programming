@@ -2,9 +2,8 @@
 
 /**
  * print_alphabet - prints the alphabet in lowercase followed by a new line
- * @c: The character to print
- *
  */
+
 void print_alphabet(void)
 {
 	int i;
