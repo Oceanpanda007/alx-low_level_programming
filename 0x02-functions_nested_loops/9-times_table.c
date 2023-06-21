@@ -5,50 +5,32 @@
 * Return: Always 0.
 */
 
-void times_table(void) {
-    int a;
-    int b;
-    int c;
-    int count = 0;
+void times_table(void)
+{
+	int a;
+	int b;
+	int c;
 
-    for (a = 0; a <= 9; a++)
-    {
-        for (b = 0; b <= 9; b++)
+	for (a = 0; a <= 9; a++)
 	{
-            c = a * b;
-
-            if (c <= 9)
-	    {
-                _putchar(48 + c);
-                if (b < 9 && count < 370)
+		for (b = 0; b <= 9; b++)
 		{
-                    _putchar(44);
-                    _putchar(32);
-                    _putchar(32);
-                    count += 4;
-                }
-            }
-	    else
-	    {
-                _putchar((c / 10) + 48);
-                _putchar((c % 10) + 48);
-                if (b < 9 && count < 370)
-		{
-                    _putchar(44);
-                    _putchar(32);
-                    count += 3;
-                }
-            }
+			c = a * b;
+			if (c <= 9)
+			{
+			_putchar(48 + c);
+			_putchar(32);
+			_putchar(32);
+			}
+			else
+			{
+			_putchar((c / 10) + 48);
+			_putchar((c % 10) + 48);
+			_putchar(44);
+			_putchar(32);
+			}
 
-            count += 2;
-            if (count >= 380)
-                break;
-        }
-
-        if (count >= 380)
-            break;
-
-        _putchar(10);
-        count += 1;
-    }
+		}
+		_putchar(10);
+	}
 }
