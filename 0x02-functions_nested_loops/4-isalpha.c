@@ -4,7 +4,7 @@
  *
  *  @c: The character in ASCII code
  *
- * Return 1 when True else 0
+ * Return: 1 when True else 0
  */
 
 int _isalpha(int c)
