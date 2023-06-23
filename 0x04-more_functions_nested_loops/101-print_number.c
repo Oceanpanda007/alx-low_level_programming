@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "main.h"
+#include <stdio.h>
 
 /**
 * print_number - prints # using _putchar function
@@ -8,28 +9,19 @@
 */
 void print_number(int n)
 {
-	int copy, nth, size = 1, ones = n % 10;
+	unsigned int k = n;
 
-	n /= 10;
-	copy = n;
-	if (ones < 0)
+	if (n < 0)
 	{
-		ones *= -1, copy *= -1, n *= -1;
+		n*= -1;
+		k = n;
 		_putchar('-');
 	}
-	if (copy > 0)
-	{
-		while (copy / 10 != 0)
-		{
-			copy /= 10, size *= 10;
-		}
-		while (size > 0)
-		{
-			nth = n / size;
-			_putchar('0' + nth);
-			n -= nth * size;
-			size /= 10;
-		}
-	}
-	_putchar('0' + ones);
+	k /= 10;
+	
+	if (k != 0)
+	print_number(k);
+	_putchar((unsigned int) n % 10 + '0');
+
+
 }
