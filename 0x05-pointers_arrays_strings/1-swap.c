@@ -10,7 +10,7 @@
 
 void swap_int(int *a, int *b)
 {
-	int swp = *a; 
+	int swp = *a;
 	*a = *b;
 	*b = swp;
 }
