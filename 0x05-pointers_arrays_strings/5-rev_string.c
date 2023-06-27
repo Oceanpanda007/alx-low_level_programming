@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *rev_string - update value.
- *@s: value to be evaluate.
- *Return: not.
+ *rev_string - reverses a string.
+ *@s: each character of the string to be reversed.
+ *Return: nothing.
  */
 void rev_string(char *s)
 {
