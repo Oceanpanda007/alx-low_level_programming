@@ -13,14 +13,18 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
 
-        /*Copy at most n bytes from the source string
-         * to the beginning of the destination string*/
+        /*
+	 * Copy at most n bytes from the source string
+         * to the beginning of the destination string
+	 */
         while (src[i] != '\0' && i < n)
         {
                 dest[i] = src[i];
 		i++;
         }
-        /*Termination at null byte*/
+        /*
+	 * Termination at null byte
+	 */
         while (i < n)
 	{
 		dest[i] = '\0';

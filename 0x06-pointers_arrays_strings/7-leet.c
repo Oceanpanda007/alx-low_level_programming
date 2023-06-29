@@ -1,41 +1,24 @@
 #include "main.h"
 /**
- * cap_string - capitalizes all words of a string
+ * leet - encode into 1337speak
  * @n: input value
  *
- *
- * Return: string
+ * Return: n value
  */
-char *cap_string(char *n)
+char *leet(char *n)
 {
-	int i;
+	int i, j;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	i = 0;
-	if (n[0] >= 'a' && n[0] <= 'z')
-	{
-		n[0] = n[0] - 32;
-	}
 	for (i = 0; n[i] != '\0'; i++)
 	{
-		switch (n[i])
+		for (j = 0; j < 10; j++)
 		{
-			case ',':
-			case ';':
-			case '.':
-			case '!':
-			case '?':
-			case '"':
-			case '(':
-			case ')':
-			case '{':
-			case '}':
-			case ' ':
-			case '\n':
-			case '\t':
-				if (n[i + 1] > 96 && n[i + 1] < 123)
-				{
-					n[i + 1] = n[i + 1] - 32;
-				}
+			if (n[i] == s1[j])
+			{
+				n[i] = s2[j];
+			}
 		}
 	}
 	return (n);

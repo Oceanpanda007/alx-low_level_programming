@@ -13,13 +13,17 @@ char *_strncat(char *dest, char *src, int n)
 {
 	char *ptr = dest;
 
-	/*Find the end of the destination string*/
+	/*
+	 * Find the end of the destination string
+	 */
 	while (*ptr != '\0')
 	{
 		ptr++;
 	}
-	/*Copy at most n bytes from the source string
-	 * to the end of the destination string*/
+	/*
+	 * Copy at most n bytes from the source string
+	 * to the end of the destination string
+	 */
 	while (*src != '\0' && n > 0)
 	{
 		*ptr = *src;
@@ -27,7 +31,9 @@ char *_strncat(char *dest, char *src, int n)
 		src++;
 		n--;
 	}
-	/*Termination at null byte*/
+	/*
+	 * Termination at null byte
+	 */
 	*ptr = '\0';
 	return (dest);
 }
